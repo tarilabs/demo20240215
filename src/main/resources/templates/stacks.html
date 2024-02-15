@@ -1,0 +1,56 @@
+{@com.redhat.hackathon.StacksDTO dto}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GE's AI Combinator Hackathon</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+
+  <div class="mx-auto">
+    {#for item in dto.quarterly}
+    <div class="bg-white shadow-md p-4 flex justify-between items-center mb-4">
+      <div>
+        <p class="text-lg font-semibold">Quarterly perf</p>
+        <p class="text-gray-600">{item}</p>
+      </div>
+      <div class="flex space-x-2">
+        <button class="border border-gray-300 rounded-full px-4 py-2 text-gray-700 hover:bg-gray-100 btn-like">👍</button>
+        <button class="border border-gray-300 rounded-full px-4 py-2 text-gray-700 hover:bg-gray-100 btn-ignore">🙅‍♂️</button>
+        <button class="border border-gray-300 rounded-full px-4 py-2 text-gray-700 hover:bg-gray-100 btn-dislike">👎</button>
+      </div>
+    </div>
+    {/for}
+    {#for item in dto.rewardzone}
+    <div class="bg-white shadow-md p-4 flex justify-between items-center mb-4">
+      <div>
+        <p class="text-lg font-semibold">Reward zone</p>
+        <p class="text-gray-600">{item}</p>
+      </div>
+      <div class="flex space-x-2">
+        <button class="border border-gray-300 rounded-full px-4 py-2 text-gray-700 hover:bg-gray-100 btn-like">👍</button>
+        <button class="border border-gray-300 rounded-full px-4 py-2 text-gray-700 hover:bg-gray-100 btn-ignore">🙅‍♂️</button>
+        <button class="border border-gray-300 rounded-full px-4 py-2 text-gray-700 hover:bg-gray-100 btn-dislike">👎</button>
+      </div>
+    </div>
+    {/for}
+    {#for item in dto.anniversary}
+    <div class="bg-white shadow-md p-4 flex justify-between items-center mb-4">
+      <div>
+        <p class="text-lg font-semibold">Time-sensitive</p>
+        <p class="text-gray-600">{item}</p>
+      </div>
+      <div class="flex space-x-2">
+        <button class="border border-gray-300 rounded-full px-4 py-2 text-gray-700 hover:bg-gray-100 btn-like">👍</button>
+        <button class="border border-gray-300 rounded-full px-4 py-2 text-gray-700 hover:bg-gray-100 btn-ignore">🙅‍♂️</button>
+        <button class="border border-gray-300 rounded-full px-4 py-2 text-gray-700 hover:bg-gray-100 btn-dislike">👎</button>
+      </div>
+    </div>
+    {/for}
+      
+  </div>
+
+</body>
+</html>
